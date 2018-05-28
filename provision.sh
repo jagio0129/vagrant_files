@@ -2,9 +2,12 @@
 
 ###
 # Vagrantfileに以下の行を追加
-# config.vm.provision :shell, path: "bootstrap.sh" :privileged => false
+# config.vm.provision :shell, path: "bootstrap.sh"
 # このファイルをVagrantfileと同じ階層に設置してvagrant up
 ### 
+
+# vagrantのプロビジョニングで使われるbashはnon-itaractiveで起動しており、ubuntuの~/.bashrcでは、non-intaractiveモードでは~/.bashrcの処理を途中で切り上げてしまう設定になっていること
+set -i
 
 # for Ubuntu16.04
 sudo apt-get update
