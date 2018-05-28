@@ -1,5 +1,3 @@
-#!bin/bash
-
 ###
 # Vagrantfileに以下の行を追加
 # config.vm.provision :shell, path: "bootstrap.sh"
@@ -12,7 +10,7 @@ set -i
 # for Ubuntu16.04
 sudo apt-get update
 
-## my vim
+## my vima
 cd
 git clone https://github.com/jagio0129/dotfiles.git
 cd dotfiles
@@ -23,6 +21,7 @@ git submodule update
 ## rbenv
 sudo apt-get install -y autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm3 libgdbm-dev
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
+git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 source ~/.bashrc
