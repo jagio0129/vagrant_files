@@ -54,3 +54,6 @@ sudo apt-get install -y \
 ## python
 pyenv install 3.6.5
 pyenv global 3.6.5
+
+## pip
+sudo apt-get install python3-pip
