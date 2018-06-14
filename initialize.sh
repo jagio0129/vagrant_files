@@ -1,6 +1,6 @@
 ###
 # Vagrantfileに以下の行を追加
-# config.vm.provision :shell, privileged: false, path: "./vagrant_filesinitialize.sh"
+# config.vm.provision :shell, privileged: false, path: "./vagrant_files/initialize.sh"
 # このファイルをVagrantfileと同じ階層に設置してvagrant up
 ### 
 

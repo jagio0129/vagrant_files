@@ -1,6 +1,6 @@
 ###
 # Vagrantfileに以下の行を追加
-# config.vm.provision :shell, privileged: false, path: "./vagrant_filespyenv.sh"
+# config.vm.provision :shell, privileged: false, path: "./vagrant_files/pyenv.sh"
 # このファイルをVagrantfileと同じ階層に設置してvagrant up
 ### 
 
@@ -16,6 +16,7 @@ sudo apt-get install -y \
     libssl-dev
 
 ## pyenv
+cd
 git clone git://github.com/yyuu/pyenv.git ${HOME}/.pyenv
 cat << EOF >> ${HOME}/.profile
 export PYENV_ROOT=\${HOME}/.pyenv

@@ -1,6 +1,6 @@
 ###
 # Vagrantfileに以下の行を追加
-# config.vm.provision :shell, privileged: false, path: "./vagrant_filesrbenv.sh"
+# config.vm.provision :shell, privileged: false, path: "./vagrant_files/rbenv.sh"
 # このファイルをVagrantfileと同じ階層に設置してvagrant up
 ### 
 
@@ -25,4 +25,4 @@ echo "gem: --no-document" > ~/.gemrc
 
 ## rails
 gem install bundler
-gem install rails 5.2.0 --no-ri --no-doc
+gem install rails 5.2.0 --no-ri
