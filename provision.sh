@@ -1,6 +1,6 @@
 ###
 # Vagrantfileに以下の行を追加
-# config.vm.provision :shell, path: "provision.sh"
+# config.vm.provision :shell, privileged: false, path: "provision.sh"
 # このファイルをVagrantfileと同じ階層に設置してvagrant up
 ### 
 
@@ -10,7 +10,7 @@ set -i
 # for Ubuntu16.04
 sudo apt-get update
 
-## my vima
+## my vim
 cd
 git clone https://github.com/jagio0129/dotfiles.git
 cd dotfiles
@@ -19,13 +19,13 @@ git submodule update
 ./dotfilesLink.sh
 
 ## rbenv
+cd
 sudo apt-get install -y autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm3 libgdbm-dev
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
 git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 source ~/.bashrc
-git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build
 
 ## ruby
 rbenv install 2.3.7
@@ -56,4 +56,7 @@ pyenv install 3.6.5
 pyenv global 3.6.5
 
 ## pip
-sudo apt-get install python3-pip
+sudo apt-get install -y python3-pip
+
+## network restart
+sudo systemctl restart network
