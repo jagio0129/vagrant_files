@@ -31,3 +31,10 @@ pyenv global 3.6.5
 
 ## pip
 sudo apt-get install -y python3-pip
+
+## anaconda
+pyenv install anaconda3-5.2.0
+pyenv rehash
+pyenv global anaconda3-5.2.0
+echo 'export PATH="$PYENV_ROOT/versions/anaconda3-5.2.0/bin/:$PATH"' >> ~/.bashrc
+source ~/.bashrc
